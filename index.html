@@ -146,7 +146,35 @@ footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wr
   nav { align-items: flex-start; }
   .links { gap: 12px; }
 }
-</style>
+
+      @media (max-width: 540px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .photo {
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .photo img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+}
+  </style>    
 </head>
 <body>
 
@@ -184,7 +212,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/natali_kirilovskaya/";
       <a class="btn btn-light" href="#services">Мої послуги</a>
     </div>
    <div class="photo">
-  <img src="photo_2026-10-22_00-40-04.jpg" alt="Наталія Кириловська">
+  <img src="photo_2026-10-22_08-22-46.jpg" alt="Наталія Кириловська">
 </div>
       </div>
     </div>
