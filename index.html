@@ -1,341 +1,523 @@
-
-      
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Наталія Кириловська — Нумеролог</title>
-<style>
-:root {
-  --green: #123d32;
-  --green-light: #285b48;
-  --cream: #f5f0e6;
-  --white: #fffdf8;
-  --pink: #bd496b;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--cream);
-  color: #26372e;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-.wrap { width: min(1100px, 90%); margin: auto; }
-header {
-  background: var(--green);
-  color: white;
-  padding: 18px 0;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.logo { font-weight: bold; }
-.logo small { display: block; font-weight: normal; }
-nav a, footer a { color: inherit; text-decoration: none; }
-.links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
-.btn {
-  display: inline-block;
-  background: var(--green);
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.btn-light { background: var(--cream); color: var(--green); }
-.hero {
-  background: var(--green);
-  color: white;
-  padding: 65px 0;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 40px;
-  align-items: center;
-}
-h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1.05; margin: 15px 0; }
-h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.15; }
-.hero p { color: #e1e5dd; font-size: 18px; }
-.photo img {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  max-height: 560px;
-  object-fit: contain;
-  border-radius: 24px;
-}
-     .photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  background: transparent;
-  min-height: auto;
-  border-radius: 0;
-  color: white;
-  text-align: center;
-}
-section { padding: 65px 0; }
-.section-intro { color: #68756b; max-width: 650px; }
-.services { display: grid; gap: 20px; }
-.service {
-  background: var(--white);
-  border-radius: 22px;
-  padding: 22px;
-  display: grid;
-  grid-template-columns: 190px 1fr auto;
-  gap: 24px;
-  align-items: center;
-}
-.cover {
-  min-height: 220px;
-  border-radius: 14px;
-  background: linear-gradient(145deg, #d8c8b3, #7b9b83, #315b47);
-  color: white;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 18px;
-  font: 28px Georgia, serif;
-}
-.service h3 { margin: 0 0 8px; font-size: 23px; }
-.service p { color: #68756b; }
-.pill {
-  display: inline-block;
-  background: #e9eee6;
-  color: #315b47;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin: 3px 3px 3px 0;
-}
-.price { font-size: 25px; font-weight: bold; white-space: nowrap; }
-.buy { min-width: 135px; }
-.about {
-  background: var(--green);
-  color: white;
-}
-.about p { color: #e1e5dd; max-width: 700px; }
-.contact-card {
-  background: white;
-  border-radius: 24px;
-  padding: 35px;
-}
-footer { background: #0d2e26; color: white; padding: 25px 0; }
-footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-@media(max-width: 800px) {
-  .hero-grid { grid-template-columns: 1fr; }
-  .photo { min-height: 300px; }
-  .service { grid-template-columns: 140px 1fr; gap: 15px; }
-  .cover { min-height: 180px; }
-  .buy { grid-column: 2; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-}
-@media(max-width: 540px) {
-  .service { grid-template-columns: 1fr; }
-  .cover { min-height: 240px; }
-  .buy { grid-column: auto; }
-  nav { align-items: flex-start; }
-  .links { gap: 12px; }
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123d32">
+  <meta name="description" content="Особисті прогнози, підбір важливих дат, PDF-гід «Інакша», сумісність і коучинг Наталії Кириловської.">
+  <title>Наталія Кириловська — Нумеролог</title>
+  <style>
+    :root {
+      --green: #123d32;
+      --green-light: #285b48;
+      --cream: #f5f0e6;
+      --white: #fffdf8;
+      --silver: #c7d0cc;
+      --ink: #26372e;
+      --muted: #68756b;
+      --line: rgba(199, 208, 204, .58);
+      --shadow: 0 14px 34px rgba(18, 61, 50, .09);
+    }
 
-      @media (max-width: 540px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; }
+    a { -webkit-tap-highlight-color: transparent; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin-inline: auto; }
 
-  .photo {
-    min-height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-  }
+    header {
+      background: var(--green);
+      color: var(--white);
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .045em;
+      line-height: 1.35;
+    }
+    .logo small { display: block; font-weight: 400; letter-spacing: .02em; }
+    .links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .links > a:not(.btn), footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .links > a:not(.btn):hover, footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-  .photo img {
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    border-radius: 20px;
-  }
-}
-  </style>    
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 11px 20px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .btn:hover { transform: translateY(-1px); background: var(--green-light); }
+    .btn-light { background: var(--cream); color: var(--green); }
+    .btn-light:hover { background: #fffdf8; }
+    .btn-outline { background: transparent; color: var(--green); border-color: #b7c2ba; }
+    .btn-outline:hover { color: white; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--green);
+      color: var(--white);
+      padding: 58px 0 68px;
+    }
+    .hero::after, .about::after {
+      content: "";
+      position: absolute;
+      left: -4%;
+      right: -4%;
+      bottom: 18px;
+      height: 25px;
+      border-top: 1px solid var(--line);
+      border-radius: 50%;
+      transform: rotate(-1.2deg);
+      pointer-events: none;
+    }
+    .hero::before, .about::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: -26px;
+      width: 150px;
+      height: 150px;
+      border: 1px solid rgba(199, 208, 204, .34);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+    .hero-copy, .about .wrap { position: relative; z-index: 1; }
+    .section-heading { position: relative; padding-bottom: 18px; }
+    .section-heading::after {
+      content: "";
+      display: block;
+      width: 110px;
+      height: 8px;
+      margin-top: 14px;
+      border-top: 1px solid #aebbb5;
+      border-bottom: 1px solid #aebbb5;
+      transform: skewX(-38deg);
+    }
+    .service { position: relative; overflow: hidden; }
+    .service::after {
+      content: "";
+      position: absolute;
+      right: -24px;
+      bottom: -27px;
+      width: 78px;
+      height: 78px;
+      border: 1px solid rgba(174, 187, 181, .42);
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+    .service-content, .cover { position: relative; z-index: 1; }
+    .cover { overflow: hidden; }
+    .cover::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 1px;
+      margin: 14px auto 0;
+      background: rgba(255,255,255,.7);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #d5dfd9;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -.025em;
+    }
+    .hero p:not(.eyebrow) { max-width: 570px; color: #e1e8e3; font-size: 18px; }
+    .hero .btn { margin-top: 10px; }
+    .photo { display: flex; justify-content: center; align-items: center; min-width: 0; }
+    .photo img {
+      display: block;
+      width: 100%;
+      max-width: 430px;
+      max-height: 590px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 24px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, .18);
+    }
+
+    section { padding: 66px 0; }
+    h2 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 400;
+      line-height: 1.14;
+    }
+    .section-intro { max-width: 650px; margin: 0 0 30px; color: var(--muted); }
+    .services { display: grid; gap: 20px; }
+    .service {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+      padding: 22px;
+      background: var(--white);
+      border: 1px solid rgba(18, 61, 50, .07);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+    .cover {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #d8c8b3, #7b9b83, #315b47);
+    }
+    .cover.portrait-cover { object-position: center 25%; }
+    .cover-placeholder {
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      color: white;
+      text-align: center;
+      font: 28px/1.2 Georgia, "Times New Roman", serif;
+    }
+    .service-content { min-width: 0; }
+    .service-no-cover { grid-template-columns: minmax(0, 1fr); }
+    .service h3 { margin: 0 0 8px; color: var(--green); font-size: 23px; line-height: 1.25; }
+    .service-summary { margin: 0 0 12px; color: var(--muted); }
+    .pills { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 16px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #e9eee6;
+      color: #315b47;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .service-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .price { color: var(--green); font-size: 24px; font-weight: 700; white-space: nowrap; }
+    .action-group { display: flex; gap: 10px; flex-wrap: wrap; }
+    .details-toggle { background: transparent; color: var(--green); border-color: #b7c2ba; }
+    .details-toggle:hover { color: white; }
+    .details {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-left: 2px solid #aebdb4;
+      background: #f7f7f1;
+      border-radius: 0 12px 12px 0;
+    }
+    .details[hidden] { display: none; }
+    .details p { margin: 0 0 9px; }
+    .details p:last-child { margin-bottom: 0; }
+
+    .about {
+      position: relative;
+      overflow: hidden;
+      background: var(--green);
+      color: var(--white);
+    }
+    .about p { max-width: 720px; margin-bottom: 0; color: #e1e8e3; font-size: 18px; }
+    .contact-card {
+      padding: clamp(24px, 5vw, 42px);
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    .contact-card p { color: var(--muted); }
+    .contact-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    footer { padding: 25px 0; background: #0d2e26; color: white; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    @media (max-width: 800px) {
+      .wrap { width: min(100% - 32px, 650px); }
+      nav { align-items: flex-start; }
+      .links { gap: 12px; justify-content: flex-end; }
+      .hero { padding: 42px 0 58px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-copy { order: 1; }
+      .photo { order: 0; }
+      .photo img { max-width: 350px; max-height: none; }
+      section { padding: 48px 0; }
+      .service { grid-template-columns: 150px minmax(0, 1fr); gap: 17px; padding: 17px; }
+      .service-no-cover { grid-template-columns: minmax(0, 1fr); }
+      .cover { height: 200px; }
+      .service h3 { font-size: 21px; }
+      .service-actions { align-items: flex-start; }
+    }
+    @media (max-width: 540px) {
+      .wrap { width: calc(100% - 28px); }
+      header { padding: 14px 0; }
+      nav { display: block; }
+      .logo { display: inline-block; margin-bottom: 12px; font-size: 14px; }
+      .links { justify-content: flex-start; gap: 8px 14px; }
+      .links > a:not(.btn) { font-size: 14px; }
+      .links .btn { width: 100%; }
+      .hero { padding: 28px 0 48px; }
+      .hero-grid { gap: 22px; }
+      .photo img { width: 100%; max-width: 310px; border-radius: 18px; }
+      .eyebrow { font-size: 10px; letter-spacing: .12em; }
+      h1 { font-size: clamp(40px, 12vw, 54px); }
+      .hero p:not(.eyebrow) { font-size: 16px; }
+      section { padding: 42px 0; }
+      h2 { font-size: 34px; }
+      .section-intro { margin-bottom: 22px; }
+      .service { grid-template-columns: 1fr; gap: 15px; padding: 15px; border-radius: 18px; }
+      .service-no-cover { grid-template-columns: minmax(0, 1fr); }
+      .cover { height: auto; max-height: 290px; aspect-ratio: 4 / 3; }
+      .cover-placeholder { min-height: 180px; }
+      .service h3 { font-size: 22px; }
+      .service-summary { font-size: 15px; }
+      .service-actions { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      .price { font-size: 23px; }
+      .action-group { display: grid; grid-template-columns: 1fr; width: 100%; }
+      .action-group .btn { width: 100%; min-height: 48px; }
+      .details { font-size: 15px; }
+      .contact-actions { display: grid; }
+      .contact-actions .btn { width: 100%; }
+      .contact-card { padding: 23px 18px; }
+      footer .wrap { display: grid; gap: 6px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
+  <script>
+    const CALCULATOR_URL = "https://kirilovskaanatala847-blip.github.io/rozrahunok-matrytsi/";
+    const TELEGRAM_URL = "https://t.me/natali_kirilovskaya";
+    const INSTAGRAM_URL = "https://www.instagram.com/natali_kirilovskaya/";
+  </script>
 
-<!-- ВСТАВ ПОСИЛАННЯ НА СВІЙ КАЛЬКУЛЯТОР У ЗМІННУ НИЖЧЕ -->
-<script>
-const CALCULATOR_URL = "https://kirilovskaanatala847-blip.github.io/rosrahunok-matrytsi/";
-const TELEGRAM_URL = "https://t.me/natali_kirilovskaya";
-const INSTAGRAM_URL = "https://www.instagram.com/natali_kirilovskaya/";
-</script>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Головна навігація">
+        <a class="logo" href="#home">НАТАЛІЯ КИРИЛОВСЬКА<small>Нумеролог</small></a>
+        <div class="links">
+          <a href="#home">Головна</a>
+          <a href="#services">Мої послуги</a>
+          <a class="btn btn-light" id="calculatorTop" href="https://kirilovskaanatala847-blip.github.io/rozrahunok-matrytsi/" target="_blank" rel="noopener">Розрахувати матрицю ↗</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="logo" href="#home">
-        НАТАЛІЯ КИРИЛОВСЬКА
-        <small>Нумеролог</small>
-      </a>
-      <div class="links">
-        <a href="#home">Головна</a>
-        <a href="#services">Мої послуги</a>
-        <a class="btn btn-light" id="calculatorTop" href="#calculator">Розрахувати матрицю ↗</a>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Нумерологія · особисті прогнози · коучинг</p>
+          <h1>Привіт!</h1>
+          <p>Спеціаліст з особистих прогнозів • Коуч</p>
+          <p>Допомагаю краще розібратися у своєму запиті, побачити можливості та визначити наступні кроки.</p>
+          <a class="btn btn-light" href="#services">Мої послуги</a>
+        </div>
+        <div class="photo">
+          <img src="photo_2026-10-22_08-22-46.jpg" alt="Наталія Кириловська" fetchpriority="high">
+        </div>
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
 
-<main>
-<section class="hero" id="home">
-  <div class="wrap hero-grid">
-    <div>
-      <p>НУМЕРОЛОГІЯ · ОСОБИСТІ ПРОГНОЗИ · КОУЧИНГ</p>
-      <h1>Привіт!<br>Я Наталія.</h1>
-      <p>Спеціаліст з особистих прогнозів • Коуч</p>
-      <p>Допомагаю краще розібратися у своєму запиті, побачити можливості та визначити наступні кроки.</p>
-      <a class="btn btn-light" href="#services">Мої послуги</a>
-    </div>
-   <div class="photo">
-  <img src="photo_2026-10-22_08-22-46.jpg" alt="Наталія Кириловська">
-</div>
+    <section id="services">
+      <div class="wrap">
+        <h2 class="section-heading">Мої послуги</h2>
+        <p class="section-intro">Обери формат, який відповідає твоєму запиту.</p>
+
+        <div class="services">
+          <article class="service">
+            <img class="cover" src="photo_2026-10-22_00-40-09.jpg" alt="Обкладинка прогнозу на рік" loading="lazy">
+            <div class="service-content">
+              <h3>Прогноз на рік</h3>
+              <p class="service-summary">Персональний погляд на теми року, можливості та важливі періоди для планування.</p>
+              <div class="pills"><span class="pill">PDF-документ + аудіо</span><span class="pill">Від 5 до 15 днів</span></div>
+              <div class="details" hidden>
+                <p>Прогноз допоможе розглянути основні теми року, звернути увагу на можливості та періоди, які варто врахувати у своїх планах.</p>
+                <p>Формат: PDF-документ + аудіо. Термін підготовки — від 5 до 15 днів.</p>
+              </div>
+              <div class="service-actions">
+                <span class="price">1 988 грн</span>
+                <div class="action-group"><button class="btn btn-outline details-toggle" type="button" aria-expanded="false">Дізнатися більше</button><a class="btn order" href="https://t.me/natali_kirilovskaya">Замовити</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service service-no-cover">
+            <div class="service-content">
+              <h3>Прогноз на місяць</h3>
+              <p class="service-summary">Орієнтири на найближчий місяць, щоб краще розуміти свій фокус і планувати справи.</p>
+              <div class="pills"><span class="pill">PDF-документ + аудіо</span><span class="pill">Від 5 до 15 днів</span></div>
+              <div class="details" hidden>
+                <p>Персональний прогноз допоможе визначити головні теми місяця, краще розставити акценти та спланувати свої справи.</p>
+                <p>Формат: PDF-документ + аудіо. Термін підготовки — від 5 до 15 днів.</p>
+              </div>
+              <div class="service-actions">
+                <span class="price">388 грн</span>
+                <div class="action-group"><button class="btn btn-outline details-toggle" type="button" aria-expanded="false">Дізнатися більше</button><a class="btn order" href="https://t.me/natali_kirilovskaya">Замовити</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service service-no-cover">
+            <div class="service-content">
+              <h3>Підбір важливих дат</h3>
+              <p class="service-summary">Підбір сприятливих дат для важливих подій і рішень у твоєму житті.</p>
+              <div class="pills"><span class="pill">PDF-документ + аудіо</span><span class="pill">Від 5 до 10 днів</span></div>
+              <div class="details" hidden>
+                <p>Для чого можна підібрати дату: подорож, весілля, відкриття бізнесу, запуск проєкту, важлива зустріч, переїзд або інша значуща подія.</p>
+                <p>Розглянемо твій запит і підберемо дати, які можна врахувати під час планування.</p>
+                <p>Формат: PDF-документ + аудіо. Термін підготовки — від 5 до 10 днів.</p>
+              </div>
+              <div class="service-actions">
+                <span class="price">788 грн</span>
+                <div class="action-group"><button class="btn btn-outline details-toggle" type="button" aria-expanded="false">Дізнатися більше</button><a class="btn order" href="https://t.me/natali_kirilovskaya">Замовити</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service">
+            <img class="cover" src="photo_2026-10-22_00-40-04.jpg" alt="Обкладинка PDF-документа Інакsha" loading="lazy">
+            <div class="service-content">
+              <h3>Інакsha — PDF-документ</h3>
+              <p class="service-summary">Таланти й сильні сторони, стиль, манікюр і зачіски, сфери реалізації та точки зростання.</p>
+              <div class="pills"><span class="pill">PDF-документ</span><span class="pill">Від 5 до 15 днів</span></div>
+              <div class="details" hidden>
+                <p>Персональний гід за датою народження, який допоможе подивитися на себе з іншого боку: розкрити таланти й сильні сторони, отримати рекомендації щодо стилю, манікюру та зачісок, а також побачити можливі сфери реалізації.</p>
+                <p>Окремо розглянемо точки зростання — зокрема, що може заважати рухатися вперед і де варто уважніше подивитися на свої фінансові рішення. Усе це поєднано з практичними ідеями для реалізації.</p>
+                <p>Формат: PDF-документ. Термін підготовки — від 5 до 15 днів.</p>
+              </div>
+              <div class="service-actions">
+                <span class="price">2 588 грн</span>
+                <div class="action-group"><button class="btn btn-outline details-toggle" type="button" aria-expanded="false">Дізнатися більше</button><a class="btn order" href="https://t.me/natali_kirilovskaya">Замовити</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service">
+            <img class="cover" src="photo_2026-10-22_00-40-13.jpg" alt="Обкладинка Between Us — сумісність" loading="lazy">
+            <div class="service-content">
+              <h3>Between Us — сумісність</h3>
+              <p class="service-summary">Розбір за датами народження, щоб краще зрозуміти одне одного, побачити сильні сторони пари та знайти більше гармонії у спілкуванні.</p>
+              <div class="pills"><span class="pill">PDF-документ + аудіо</span><span class="pill">Від 5 до 15 днів</span></div>
+              <div class="details" hidden>
+                <p>Розбір допоможе подивитися на особливості вашої взаємодії, сильні сторони пари, можливі точки напруження та способи краще чути одне одного.</p>
+                <p>Ваші стосунки можуть бути гармонійнішими, коли ви краще розумієте себе та одне одного.</p>
+                <p>Формат: PDF-документ + аудіо. Термін підготовки — від 5 до 15 днів.</p>
+              </div>
+              <div class="service-actions">
+                <span class="price">888 грн</span>
+                <div class="action-group"><button class="btn btn-outline details-toggle" type="button" aria-expanded="false">Дізнатися більше</button><a class="btn order" href="https://t.me/natali_kirilovskaya">Замовити</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service">
+            <img class="cover portrait-cover" src="photo_2026-10-22_08-22-46.jpg" alt="Наталія Кириловська — коучингова сесія" loading="lazy">
+            <div class="service-content">
+              <h3>Коучингова сесія</h3>
+              <p class="service-summary">Індивідуальна робота з твоїм запитом: визначимо, що заважає рухатися вперед, розставимо пріоритети та сформуємо наступні кроки.</p>
+              <div class="pills"><span class="pill">Індивідуальна сесія</span></div>
+              <div class="details" hidden>
+                <p>Під час сесії зосередимося на твоєму актуальному запиті, дослідимо, що зараз стримує рух, визначимо пріоритети та сформуємо конкретні наступні кроки.</p>
+                <p>Це простір для уважної розмови, ясності й пошуку рішень, які підходять саме тобі.</p>
+              </div>
+              <div class="service-actions">
+                <span class="price">1 000 грн</span>
+                <div class="action-group"><button class="btn btn-outline details-toggle" type="button" aria-expanded="false">Дізнатися більше</button><a class="btn order" href="https://t.me/natali_kirilovskaya">Замовити</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="about">
+      <div class="wrap">
+        <h2 class="section-heading">Більше ясності — більше можливостей</h2>
+        <p>У роботі для мене важливо, щоб ти могла застосувати отриману інформацію у своєму житті: побачити варіанти, сформулювати запит і зрозуміти, з чого почати.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact-card">
+        <h2>Є запитання?<br>Хочеш записатися?</h2>
+        <p>Напиши мені, і ми обговоримо твій запит та підберемо формат роботи.</p>
+        <div class="contact-actions">
+          <a class="btn" id="telegram" href="https://t.me/natali_kirilovskaya" target="_blank" rel="noopener">Написати в Telegram ↗</a>
+          <a class="btn btn-outline" id="instagram" href="https://www.instagram.com/natali_kirilovskaya/" target="_blank" rel="noopener">Знайти в Instagram ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Наталія Кириловська</span>
+      <span>Нумеролог · Особисті прогнози · Коучинг</span>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="services">
-  <div class="wrap">
-    <h2>Мої послуги</h2>
-    <p class="section-intro">Обери формат, який відповідає твоєму запиту.</p>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    <div class="services">
-
-      <article class="service">
-        <div class="cover">Твій прогноз<br>на рік</div>
-        <div>
-          <h3>Прогноз на рік</h3>
-          <p>Персональний погляд на теми року, можливості та важливі періоди для планування.</p>
-          <span class="pill">PDF-файл та аудіопояснення</span>
-          <span class="pill">Від 5 до 15 днів</span>
-        </div>
-        <div class="buy"><div class="price">1 988 грн</div><a class="btn order" href="#">Замовити</a></div>
-      </article>
-
-      <article class="service">
-        <div class="cover">Прогноз<br>на місяць</div>
-        <div>
-          <h3>Прогноз на місяць</h3>
-          <p>Орієнтири на найближчий місяць, щоб краще розуміти свій фокус і планувати справи.</p>
-          <span class="pill">PDF-файл та аудіопояснення</span>
-          <span class="pill">Від 5 до 15 днів</span>
-        </div>
-        <div class="buy"><div class="price">388 грн</div><a class="btn order" href="#">Замовити</a></div>
-      </article>
-
-      <article class="service">
-        <div class="cover">Важливі<br>дати</div>
-        <div>
-          <h3>Підбір важливих дат</h3>
-          <p>Персональний підбір дат для події або справи, яку ти плануєш.</p>
-          <span class="pill">PDF-файл та аудіопояснення</span>
-          <span class="pill">Від 5 до 15 днів</span>
-        </div>
-        <div class="buy"><div class="price">788 грн</div><a class="btn order" href="#">Замовити</a></div>
-      </article>
-
-      <article class="service">
-        <div class="cover">Інакша</div>
-        <div>
-          <h3>«Інакша» — PDF-гід</h3>
-          <p>Рекомендації щодо стилю, манікюру та зачісок, таланти й сильні сторони, відповідні сфери роботи, реалізація та дії для ресурснішого повсякдення.</p>
-          <span class="pill">PDF-файл</span>
-          <span class="pill">Від 5 до 15 днів</span>
-        </div>
-        <div class="buy"><div class="price">2 588 грн</div><a class="btn order" href="#">Замовити</a></div>
-      </article>
-
-      <article class="service">
-        <div class="cover">Between<br>Us</div>
-        <div>
-          <h3>Between Us — сумісність</h3>
-          <p>Розбір за датами народження, щоб краще зрозуміти одне одного, побачити сильні сторони пари та знайти більше гармонії у спілкуванні.</p>
-          <span class="pill">PDF-файл та аудіопояснення</span>
-          <span class="pill">Від 5 до 15 днів</span>
-        </div>
-        <div class="buy"><div class="price">888 грн</div><a class="btn order" href="#">Замовити</a></div>
-      </article>
-
-      <article class="service">
-        <div class="cover">Коучинг</div>
-        <div>
-          <h3>Коучингова сесія</h3>
-          <p>Індивідуальна робота з твоїм запитом: визначимо, що заважає рухатися вперед, розставимо пріоритети та сформуємо наступні кроки.</p>
-          <span class="pill">Індивідуальна сесія</span>
-        </div>
-        <div class="buy"><div class="price">1 000 грн</div><a class="btn order" href="#">Замовити</a></div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="about">
-  <div class="wrap">
-    <h2>Більше ясності — більше можливостей</h2>
-    <p>У роботі для мене важливо, щоб ти могла застосувати отриману інформацію у своєму житті: побачити варіанти, сформулювати запит і зрозуміти, з чого почати.</p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap contact-card">
-    <h2>Є запитання?<br>Хочеш записатися?</h2>
-    <p>Напиши мені, і ми обговоримо твій запит та підберемо формат роботи.</p>
-    <p><a class="btn" id="telegram" href="#">Написати в Telegram ↗</a></p>
-    <p><a class="btn" id="instagram" href="#">Знайти в Instagram ↗</a></p>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span>© <span id="year"></span> Наталія Кириловська</span>
-    <span>Нумеролог · Особисті прогнози · Коучинг</span>
-  </div>
-</footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("telegram").href = TELEGRAM_URL;
-document.getElementById("instagram").href = INSTAGRAM_URL;
-document.querySelectorAll(".order").forEach(link => link.href = TELEGRAM_URL);
-
-const calcButton = document.getElementById("calculatorTop");
-calcButton.href = CALCULATOR_URL;
-calcButton.target = "_blank";
-calcButton.rel = "noopener";
-calcButton.addEventListener("click", function(event) {
-  if (CALCULATOR_URL.startsWith("ВСТАВ_")) {
-    event.preventDefault();
-    alert("https://kirilovskaanatala847-blip.github.io/rosrahunok-matrytsi/");
-  }
-});
-</script>
+    document.querySelectorAll(".details-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".service-content");
+        const details = card.querySelector(".details");
+        const isOpening = details.hidden;
+        details.hidden = !isOpening;
+        button.setAttribute("aria-expanded", String(isOpening));
+        button.textContent = isOpening ? "Згорнути" : "Дізнатися більше";
+      });
+    });
+  </script>
 </body>
 </html>
-
