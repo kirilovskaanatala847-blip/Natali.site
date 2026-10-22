@@ -311,7 +311,16 @@
       .section-intro { margin-bottom: 22px; }
       .service { grid-template-columns: 1fr; gap: 15px; padding: 15px; border-radius: 18px; }
       .service-no-cover { grid-template-columns: minmax(0, 1fr); }
-      .cover { height: auto; max-height: 290px; aspect-ratio: 4 / 3; }
+      /* На телефоне показываем обложку целиком, без обрезанных краёв */
+      .cover {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
+        background: transparent;
+      }
       .cover-placeholder { min-height: 180px; }
       .service h3 { font-size: 22px; }
       .service-summary { font-size: 15px; }
